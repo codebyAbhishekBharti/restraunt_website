@@ -432,13 +432,23 @@ video{
 #sec6h1_l2{
     width: 100px;
     text-align: center;
+    font-weight: bold;
     margin-top:  auto 0;
-    background-color: #b19254;
+    background-color: #f9d8ae;
+    color: #1a1e22;
+}
+#sec6h1_l2:hover{
     color: white;
+    transition: all 0.25s;
 }
 #sec6h1_l3{
     color: #b19254;
     font-weight: bold;
+}
+#sec6h1_l3:hover{
+    color: white;
+    background-color: #f9d8ae;
+    transition: all 0.25s;
 }
 #grid1{
     display: grid;
@@ -865,6 +875,6 @@ video{
         margin-top: 400px;
     }
     .card_1{
-        width: 200px !important;
+        width: 170px !important;
     }
 }
