@@ -8,6 +8,7 @@
     position: fixed;
     background-color: #1a1e22;
     z-index: 99999;
+    /* transition: all 5s; */
 }
 .preloader_image{
     position: relative;
@@ -898,5 +899,9 @@ video{
     }
     .card_1{
         width: 170px !important;
+    }
+    .preloader_image{
+        width: 100px;
+        height: auto;
     }
 }
