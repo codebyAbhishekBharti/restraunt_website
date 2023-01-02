@@ -10,6 +10,7 @@
     <script src="https://kit.fontawesome.com/e65ce9ab21.js" crossorigin="anonymous"></script>
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="cabbana.css">
 </head>
 
@@ -147,7 +148,7 @@
         <div id="sec3_back_banner"></div>
         <div id="sec3_main_heading" class="sec3_heading">restaurant</div>
         <div class="slider_layout">
-            <div id="slider2">
+            <div id="animated_slider1" class="slider2">
                 <img id="slider1" class="images"
                     src="homepage_image/section3_image/HOT-AND-SOUR-LOBSTER-CLAW-scaled-aspect-ratio-1366-768-scaled.jpg"
                     alt="">
@@ -233,7 +234,7 @@
     <section id="section5">
         <div id="sec5_main_heading" class="sec3_heading"></div>
         <div class="slider_layout">
-            <div id="slider2">
+            <div id="animated_slider2" class="slider2">
                 <img id="slider2img" class="images"
                     src="homepage_image/section5/LST-aspect-ratio-1366x768-2-e1574943555513.jpg" alt="">
                 <div id="sec3_box5" class="sec3_box" style="height: 400px;">
@@ -719,14 +720,20 @@
             element: document.getElementById('sec3_back_banner'),
             handler: function (direction) {
                 document.getElementById("sec3_back_banner").classList.add("animation1");
+                // document.getElementById("sec3_back_banner").style.backgroundColor="red";
                 document.getElementById('sec3_main_heading').innerHTML = "RESTRAUNT";
                 document.getElementById("sec3_main_heading").classList.add("animation2");
+                setTimeout(() => {
+                    document.getElementById('animated_slider1').style.display='block';
+                    document.getElementById('animated_slider1').classList.add('animate__animated', 'animate__fadeIn','animate__faster');
+                },1000);
             },
             offset: '75%'
         })
         var waypoint = new Waypoint({
             element: document.getElementById('sec4_img'),
             handler: function (direction) {
+                // document.getElementById("sec4_img").style.display='block';
                 document.getElementById("sec4_img").classList.add("animation3");
             },
             offset: '75%'
@@ -739,12 +746,27 @@
             },
             offset: '75%'
         })        
+        var waypoint = new Waypoint({
+            element: document.getElementById('section5'),
+            handler: function (direction) {
+                document.getElementById("animated_slider2").style.display='block';
+                document.getElementById('animated_slider2').classList.add('animate__animated', 'animate__fadeIn');
+            },
+            offset: '50%'
+        })
+        var waypoint = new Waypoint({
+            element: document.getElementById('section6'),
+            handler: function (direction) {
+                // document.getElementById("section6").style.display='block';
+                document.getElementById('section6').classList.add('animate__animated', 'animate__fadeIn');
+            },
+            offset: '75%'
+        })
     </script>
     <script>
         function preloader_fn() {
             document.getElementById('preloader').style.display = 'none';
             document.getElementById("afterpreloader").style.display='block';
-            // alert("aasdf")
         }
     </script>
 </body>
